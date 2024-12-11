@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: NotificationService
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: travelbuddy721@gmail.com
+    password: bcgpstggodzjblqo
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          auth: true
+
+
+  data:
+    mongodb:
+      uri: mongodb+srv://deva:deva123@atlascluster.inazn0l.mongodb.net/
+      database: TravelBuddy
+
+server:
+  port: 8080
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    registry-with-eureka: true
+    service-url:
+      defaultZone:  https://travelbuddy-servicediscovery-production.up.railway.app/eureka/
